@@ -1,6 +1,7 @@
 package com.company.section1;
 
 import java.util.ArrayList;
+import java.util.TreeSet;
 
 public class Test {
     public static void main(String[] args) {
@@ -26,6 +27,19 @@ public class Test {
         box.clear();
         System.out.println();
         System.out.println(box.size());
+
+        /*
+        3) Создать TreeSet содержащий HeavyBox. HeavyBox должен реализовать интерфейс Comparable.
+        Распечатать содержимое с помощью for each.
+         */
+        System.out.println("new TreeSet");
+        TreeSet<HeavyBox> treeSet =  new TreeSet<>();
+        for (int i = 5; i >= 0; i--) {
+            treeSet.add(new HeavyBox("treeSet " + i));
+        }
+        for (HeavyBox a : treeSet) {
+            System.out.println(a.getName());
+        }
 
     }
 }

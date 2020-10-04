@@ -1,6 +1,6 @@
 package com.company.section1;
 
-public class HeavyBox {
+public class HeavyBox implements Comparable<HeavyBox>{
     private String name;
 
     public HeavyBox(String name) {
@@ -19,4 +19,12 @@ public class HeavyBox {
     public void setName(String name) {
         this.name = name;
     }
+
+
+
+    public int compareTo(HeavyBox heavyBox) {
+        return this.name.compareTo(heavyBox.name);
+    }
+
+
 }
