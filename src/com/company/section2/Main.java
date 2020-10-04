@@ -2,7 +2,10 @@ package com.company.section2;
 
 import java.sql.SQLOutput;
 import java.util.*;
-
+/*
+4) Пользователь вводит набор чисел в виде одной строки "1, 2, 3, 4, 4, 5".
+   Избавиться от повторяющихся элементов в строке и вывести результат на экран.
+ */
 public class Main {
 
     public static Scanner in = new Scanner(System.in);
