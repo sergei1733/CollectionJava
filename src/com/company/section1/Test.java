@@ -1,7 +1,6 @@
 package com.company.section1;
 
-import java.util.ArrayList;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
@@ -41,5 +40,26 @@ public class Test {
             System.out.println(a.getName());
         }
 
+
+        /*
+        6 Создать очередь, содержащую объекты класса HeavyBox. Используем класс ArrayDeque.
+        Поместить объекты в очередь с помощью метода offer(). Удалить объекты методом poll().
+         */
+        Queue<HeavyBox> queue = new ArrayDeque<HeavyBox>();
+
+        for (int i = 0; i < 5; i++) {
+            queue.offer(new HeavyBox("элемент "+i+10));
+        }
+        System.out.println("/////////////////////////////");
+        for (HeavyBox n : queue) {
+            System.out.println(n.getName());
+        }
+        for (int i = 0; i < 5; i++) {
+            queue.poll();
+        }
+        System.out.println("после удаления");
+        for (HeavyBox n : queue) {
+            System.out.println(n.getName());
+        }
     }
 }
