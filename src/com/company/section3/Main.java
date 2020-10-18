@@ -23,12 +23,18 @@ public class Main {
         }
         System.out.println(union(union1,union2));
 
+        System.out.println(intersect(union1,union2));
     }
 
     public static Set union(Set<Integer> union1, Set<Integer> union2){
         union1.addAll(union2);
         return union1;
 
+    }
+
+    public static Set intersect(Set<Integer> union1, Set<Integer> union2){
+        union1.retainAll(union2);
+        return union1;
     }
 
 
