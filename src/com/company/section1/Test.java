@@ -32,7 +32,7 @@ public class Test {
         Распечатать содержимое с помощью for each.
          */
         System.out.println("new TreeSet");
-        TreeSet<HeavyBox> treeSet =  new TreeSet<>();
+        TreeSet<HeavyBox> treeSet = new TreeSet<>();
         for (int i = 5; i >= 0; i--) {
             treeSet.add(new HeavyBox("treeSet " + i));
         }
@@ -48,7 +48,7 @@ public class Test {
         Queue<HeavyBox> queue = new ArrayDeque<HeavyBox>();
 
         for (int i = 0; i < 5; i++) {
-            queue.offer(new HeavyBox("элемент "+i+10));
+            queue.offer(new HeavyBox("элемент " + i + 10));
         }
         System.out.println("/////////////////////////////");
         for (HeavyBox n : queue) {
@@ -61,5 +61,49 @@ public class Test {
         for (HeavyBox n : queue) {
             System.out.println(n.getName());
         }
+        /*
+        7 Создать коллекцию, содержащую объекты HeavyBox. Написать метод, который перебирает
+          элементы коллекции и проверяет вес коробок. Если вес коробки больше 300 гр, коробка
+          перемещается в другую коллекцию.
+         */
+        System.out.println("Задание 7 ______________________________________");
+        ArrayList<HeavyBox> box1 = new ArrayList<HeavyBox>();
+
+        for (int i = 0; i < 4; i++) {
+            box1.add(new HeavyBox("коробка " + i, 180 * i));
+        }
+        proverka(box1);
+        /*
+        for (HeavyBox e : box1) {
+            System.out.println(e.getName() + " " + e.getVes());
+        }
+
+        for (HeavyBox e : box1) {
+            System.out.println(e.getName() + " " + e.getVes());
+        }
+         */
+
+
+    }
+    public static void proverka(ArrayList<HeavyBox> box){
+        ArrayList<HeavyBox> box2 = new ArrayList<HeavyBox>();
+        ArrayList<HeavyBox> box3 = new ArrayList<HeavyBox>();
+        for (HeavyBox e : box) {
+
+            if (e.getVes() >= 300)
+                box2.add(e);
+                else
+                box3.add(e);
+        }
+        System.out.println("изначальный после удаления");
+        for (HeavyBox e : box3) {
+            System.out.println(e.getName() + " " + e.getVes());
+        }
+        System.out.println("тот что получился после создания");
+        for (HeavyBox e : box2) {
+            System.out.println(e.getName() + " " + e.getVes());
+        }
+
+
     }
 }

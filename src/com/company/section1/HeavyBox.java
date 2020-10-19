@@ -1,15 +1,27 @@
 package com.company.section1;
 
-public class HeavyBox implements Comparable<HeavyBox>{
+import java.util.ArrayList;
+
+public class HeavyBox implements Comparable<HeavyBox> {
     private String name;
+    private Integer ves;
 
     public HeavyBox(String name) {
         this.name = name;
     }
 
+    public HeavyBox(String name, Integer ves) {
+        this.name = name;
+        this.ves = ves;
+    }
+
     @Override
     public String toString() {
-        return name ;
+        return name;
+    }
+
+    public Integer getVes() {
+        return ves;
     }
 
     public String getName() {
@@ -21,10 +33,10 @@ public class HeavyBox implements Comparable<HeavyBox>{
     }
 
 
-
     public int compareTo(HeavyBox heavyBox) {
         return this.name.compareTo(heavyBox.name);
     }
+
 
 
 }
